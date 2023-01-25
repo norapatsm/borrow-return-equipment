@@ -6,7 +6,7 @@ app.get('/',(req,res) =>{
 })
 
 app.get('/home',(req,res) =>{
-    res.sendFile(__dirname+"/public/workshop3_homepage.html")
+    res.sendFile(__dirname+"/public/First_page.html")
 })
 app.get('/about',(req,res) =>{
     res.sendFile(__dirname+"/public/workshop3_about.html")
