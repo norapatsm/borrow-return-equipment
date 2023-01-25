@@ -39,5 +39,5 @@ app.get('*',(req,res) =>{
 
 
 app.listen(1001,() =>{
-    console.log("startserver at port[3000]")
+    console.log("startserver at port[1001]")
 })
