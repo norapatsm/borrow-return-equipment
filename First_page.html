@@ -22,8 +22,9 @@
     <label for="studentID">รหัสนักศึกษา:</label>
     <input type="text" id="studentID" name="studentID" required>
     <br><br>
-    <input type="submit" value="Submit">
-    <li><a style="color: aqua;"a href="second_page.html">sub  mit</a></li>
+    <a href="second_page.html">
+      <button type="submit" value="Submit">b1</button>
+
   </form>
   <script>
     function validateForm() {
@@ -36,7 +37,7 @@
         alert("Both First Name-surname and Student ID are required to be filled out");
         return false;
       } else {
-        window.location.href = "Devices.html";
+        window.location.href = "second_page.html";
       }
     }
   </script>

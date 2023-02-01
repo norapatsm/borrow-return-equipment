@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loan-Return Program - Login</title>
+  <style>
+    body {
+      background-color: white;
+    }
+    input {
+      font-size: 20px;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Loan-Return Program</h1>
+  <h2>Please Login</h2>
+  <form onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br><br>
+    <label for="studentID">Student ID:</label>
+    <input type="text" id="studentID" name="studentID" required>
+    <br><br>
+    <input type="submit" value="Submit" onclick="location.href='second_page.html'"> 
+  </form>
+  <script>
+    function validateForm() {
+      var name = document.forms["form"]["name"].value;
+      var studentID = document.forms["form"]["studentID"].value;
+      if (name == "" || studentID == "") {
+        alert("Name and Student ID are required to be filled out");
+        return false;
+      } else {
+        window.location.href = "second_page.html";
+      }
+    }
+  </script>
+</body>
+</html>
