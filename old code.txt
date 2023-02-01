@@ -1,39 +1,29 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>borrow-return-equipment - Login</title>
-  <style>
-    body {
-      background-color: white;
-    }
-    input {
-      font-size: 20px;
-      color: blue;
-    }
-  </style>
-</head>
-<body>
-  <h1>Device loan-return program</h1>
-  <h2>Please login</h2>
-  <form onsubmit="return validateForm()">
-    <label for="firstname-surname">First Name-surname:</label>
-    <input type="text" id="firstname" name="firstname" required>
-    <br><br>
-    <label for="studentID">Student ID:</label>
-    <input type="text" id="studentID" name="studentID" required>
-    <br><br>
-    <input type="submit" value="Submit">
-  </form>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>โปรเเกรมยืมคืนอุปกรณ์ login</title>
+        <link rel="stylesheet" href="b2.css">
+    </head>
+    <style>
+    </style>
+    <body>
+      <h1>โปรเเกรมยืมคืนอุปกรณ์</h1>
+      <h2>Please login</h2>
+    <form action="block1.html"> 
+        <label class = "dec_label"for = "f_name" i >ชื่อ-นามสกุล: </label>
+        <input class = "dec_input" type="text" id="f_name" name="f_name" size="25">
+        <br><br><br>
+        <label class = "dec_label"for = "p_id" i >รหัสนักศึก: </label>
+        <input class = "dec_input"type="number" id="p_id" name="p_id"size="25">
+        <br><br><br>
+        <div id="output_block2">
+        <a href="second_page.html">
+         <button type="button" id = "sub_list">Submit</button>
+        </a>
+        </div>
+    </form>
 
-  <script>
-    function validateForm() {
-      var firstname = document.forms["form"]["firstname"].value;
-      var studentID = document.forms["form"]["studentID"].value;
-      if (firstname == "" || studentID == "") {
-        alert("Both First Name-surname and Student ID are required to be filled out");
-        return false;
-      }
-    }
-  </script>
+    <script src = "block2.js"></script>
 </body>
 </html>

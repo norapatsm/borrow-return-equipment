@@ -1,40 +1,40 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Loan-Return Program - Login</title>
-  <style>
-    body {
-      background-color: white;
-    }
-    input {
-      font-size: 20px;
-      color: blue;
-    }
-  </style>
-</head>
-<body>
-  <h1>Loan-Return Program</h1>
-  <h2>Please Login</h2>
-  <form onsubmit="return validateForm()">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    <br><br>
-    <label for="studentID">Student ID:</label>
-    <input type="text" id="studentID" name="studentID" required>
-    <br><br>
-    <input type="submit" value="Submit" onclick="location.href='second_page.html'"> 
-  </form>
-  <script>
-    function validateForm() {
-      var name = document.forms["form"]["name"].value;
-      var studentID = document.forms["form"]["studentID"].value;
-      if (name == "" || studentID == "") {
-        alert("Name and Student ID are required to be filled out");
-        return false;
-      } else {
-        window.location.href = "second_page.html";
+<html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <title>โปรเเกรมยืมคืนอุปกรณ์</title>
+         <link rel="stylesheet" href="b2.css">
+     </head>
+     <style>
+     </style>
+     <body>
+       <h1>โปรเเกรมยืมคืนอุปกรณ์</h1>
+       <h2>Please login</h2>
+     <form>
+         <label class = "dec_label"for = "f_name" i >First-Last Name: </label>
+         <input class = "dec_input" type="text" id="f_name" name="f_name" size="25">
+         <br><br><br>
+         <label class = "dec_label"for = "p_id" i >Student ID: </label>
+         <input class = "dec_input"type="number" id="p_id" name="p_id"size="25">
+         <br><br><br>
+         <div id="output_block2">
+          <button type="button" id = "sub_list" onclick="submitForm()">Submit</button>
+         </div>
+     </form>
+     <script>
+      function submitForm() {
+          var fName = document.getElementById("f_name").value;
+          var sId = document.getElementById("p_id").value;
+  
+          if (fName === "" || sId === "") {
+              alert("Please fill in First-Last Name and Student ID");
+          } else {
+              window.location.href = "second_page.html";
+          }
       }
-    }
-  </script>
+   </script>
 </body>
 </html>
+
+
+     
