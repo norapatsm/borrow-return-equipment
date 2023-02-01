@@ -3,7 +3,7 @@
      <head>
          <meta charset="UTF-8">
          <title>โปรเเกรมยืมคืนอุปกรณ์</title>
-         <link rel="stylesheet" href="b2.css">
+         <link rel="stylesheet" href="First_page.css">
      </head>
      <style>
      </style>
@@ -20,21 +20,26 @@
          <div id="output_block2">
           <button type="button" id = "sub_list" onclick="submitForm()">Submit</button>
          </div>
+         <br><br>
+         <div id="output_block2">
+          <button type="button" id = "admin_btn" onclick="adminForm()">Only Admin</button>
+         </div>
      </form>
      <script>
       function submitForm() {
           var fName = document.getElementById("f_name").value;
           var sId = document.getElementById("p_id").value;
-  
+
           if (fName === "" || sId === "") {
-              alert("Please fill in First-Last Name and Student ID");
-          } else {
-              window.location.href = "second_page.html";
-          }
+          alert("Please fill in First-Last Name and Student ID");
+      } else {
+          window.location.href = "second_page.html";
       }
+  }
+
+  function adminForm() {
+      window.location.href = "admin_page.html";
+  }
    </script>
 </body>
 </html>
-
-
-     
